@@ -1,1 +1,1 @@
-Res to upload some funcs that I find interesting coding
+Repo to upload some funcs, small progs that I found interesting when coding
