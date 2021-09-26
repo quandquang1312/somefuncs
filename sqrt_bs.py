@@ -1,11 +1,15 @@
-eps = 0.001
+class MathFuncs():
+	def __init__(self):
+		self.eps_sqrt = 0.000001
 
-def sqrt(num, hs, s):
-	if (hs**2 > (num-eps) and hs**2 < (num+eps)):
-		return hs
+	def sqrt(self, num):
+		return self.cal_sqrt(num,num/2,num)
 
-	if (hs**2 < (num-eps)):
-		return sqrt(num, (hs+s)/2, s)
-	if (hs**2 > (num+eps)):
-		return sqrt(num, hs/2, hs)
+	def cal_sqrt(self, num, hs, s):
+		if (hs**2 > (num-self.eps_sqrt) and hs**2 < (num+self.eps_sqrt)):
+			return hs
 
+		if (hs**2 < (num-self.eps_sqrt)):
+			return self.cal_sqrt(num, (hs+s)/2, s)
+		if (hs**2 > (num+self.eps_sqrt)):
+			return self.cal_sqrt(num, hs/2, hs)
