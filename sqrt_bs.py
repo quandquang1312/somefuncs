@@ -1,6 +1,6 @@
 class MathFuncs():
 	def __init__(self):
-		self.eps_sqrt = 0.0000001
+		self.eps_sqrt = 0.000001
 
 	def sqrt(self, num):
 		return self.cal_sqrt(num,num/2,num)
